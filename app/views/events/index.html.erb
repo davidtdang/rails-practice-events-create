@@ -8,15 +8,19 @@
       <th>
         Date
       </th>
+
       <th>
         Description
       </th>
+
       <th>
         Requires ID?
       </th>
+
       <th>
         Capacity
       </th>
+      
       <th>
         Directions
       </th>
@@ -26,21 +30,29 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <th>
+        <td>
           <%= event.date %>
-        </th>
-        <th>
+        </td>
+
+        <td>
           <%= event.description %>
-        </th>
-        <th>
+        </td>
+
+        <td>
           <%= event.requires_id %>
-        </th>
-        <th>
+        </td>
+
+        <td>
           <%= event.capacity %>
-        </th>
-        <th>
+        </td>
+
+        <td>
           <%= event.directions %>
-        </th>
+        </td>
+
+        <td>
+          <%= link_to("Edit", edit_event_path(event)) %>
+        </td>
       </tr>
     <% end %>
 </table>
