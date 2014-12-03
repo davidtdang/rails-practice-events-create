@@ -20,7 +20,7 @@
       <th>
         Capacity
       </th>
-      
+
       <th>
         Directions
       </th>
@@ -52,6 +52,10 @@
 
         <td>
           <%= link_to("Edit", edit_event_path(event)) %>
+        </td>
+
+        <td>
+          <%= link_to 'Delete', event_path(event), method: :delete, data: {confirm: true } %>
         </td>
       </tr>
     <% end %>
